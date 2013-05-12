@@ -1,0 +1,264 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="?android:attr/actionBarSize"
+    tools:context=".InputActivity$SleepTimeFragment" >
+    
+    <com.jrajav.bedtime.LabelView
+        android:id="@+id/sleep_sleep_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/label_padding"
+        android:text="@string/sleep_sleep_label"
+        android:textIsSelectable="false"
+        style="@style/text_label" />
+
+    
+    <com.jrajav.bedtime.DigitalClock
+        android:id="@+id/sleep_main_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/sleep_sleep_label"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+    	android:paddingTop="@dimen/clock_padding"
+        android:clickable="true"
+        android:background="@drawable/item_background">
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/timeDisplayHours_sleep_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/time_margin_right"
+            android:singleLine="true"
+            android:ellipsize="none"
+            style="@style/big_bold"
+            android:textColor="@color/clock_white" />
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/timeDisplayMinutes_sleep_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/big_thin"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:textColor="@color/clock_white" />
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/am_pm_sleep_main"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="@style/label"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:layout_gravity="top"
+            android:textColor="@color/clock_white" />
+        
+    </com.jrajav.bedtime.DigitalClock>
+    
+    
+    <com.jrajav.bedtime.LabelView
+        android:id="@+id/sleep_wake_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sleep_main_clock"
+        android:paddingTop="@dimen/label_padding"
+        android:text="@string/sleep_wake_label"
+        android:textIsSelectable="false"
+        android:visibility="invisible"
+        style="@style/text_label" />
+    
+    
+    
+    <RelativeLayout
+        android:id="@+id/sleep_rel_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sleep_wake_label"
+    	android:paddingTop="@dimen/clock_padding"
+        android:gravity="center">
+
+    <com.jrajav.bedtime.DigitalClock
+        android:id="@+id/sleep_result_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:baselineAligned="false"
+        android:clickable="false"
+        android:background="@drawable/item_background"
+        android:visibility="invisible">
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/timeDisplayHours_sleep_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/time_margin_right"
+            android:singleLine="true"
+            android:ellipsize="none"
+            style="@style/medium_bold"
+            android:textColor="@color/clock_white" />
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/timeDisplayMinutes_sleep_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/medium_light"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:textColor="@color/clock_white" />
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/am_pm_sleep_1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="@style/label"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:layout_gravity="top"
+            android:textColor="@color/clock_white" />
+        
+    </com.jrajav.bedtime.DigitalClock>
+    
+    <com.jrajav.bedtime.DigitalClock
+        android:id="@+id/sleep_result_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/sleep_result_1"
+        android:paddingLeft="40dp"
+        android:gravity="center"
+        android:baselineAligned="false"
+        android:clickable="false"
+        android:background="@drawable/item_background"
+        android:visibility="invisible">
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/timeDisplayHours_sleep_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/time_margin_right"
+            android:singleLine="true"
+            android:ellipsize="none"
+            style="@style/medium_bold"
+            android:textColor="@color/clock_white" />
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/timeDisplayMinutes_sleep_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/medium_light"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:textColor="@color/clock_white" />
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/am_pm_sleep_3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="@style/label"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:layout_gravity="top"
+            android:textColor="@color/clock_white" />
+        
+    </com.jrajav.bedtime.DigitalClock>
+    
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sleep_rel_1"
+    	android:paddingTop="@dimen/clock_padding"
+        android:gravity="center">
+    
+    <com.jrajav.bedtime.DigitalClock
+        android:id="@+id/sleep_result_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:baselineAligned="false"
+        android:clickable="false"
+        android:background="@drawable/item_background"
+        android:visibility="invisible">
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/timeDisplayHours_sleep_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/time_margin_right"
+            android:singleLine="true"
+            android:ellipsize="none"
+            style="@style/medium_bold"
+            android:textColor="@color/clock_white" />
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/timeDisplayMinutes_sleep_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/medium_light"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:textColor="@color/clock_white" />
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/am_pm_sleep_2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="@style/label"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:layout_gravity="top"
+            android:textColor="@color/clock_white" />
+        
+    </com.jrajav.bedtime.DigitalClock>
+    
+    <com.jrajav.bedtime.DigitalClock
+        android:id="@+id/sleep_result_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/sleep_result_2"
+        android:gravity="center"
+        android:paddingLeft="40dp"
+        android:baselineAligned="false"
+        android:clickable="false"
+        android:background="@drawable/item_background"
+        android:visibility="invisible">
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/timeDisplayHours_sleep_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/time_margin_right"
+            android:singleLine="true"
+            android:ellipsize="none"
+            style="@style/medium_bold"
+            android:textColor="@color/clock_white" />
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/timeDisplayMinutes_sleep_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/medium_light"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:textColor="@color/clock_white" />
+        
+        <com.jrajav.bedtime.ZeroTopPaddingTextView
+            android:id="@+id/am_pm_sleep_4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="@style/label"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:layout_gravity="top"
+            android:textColor="@color/clock_white" />
+        
+    </com.jrajav.bedtime.DigitalClock>
+    
+    </RelativeLayout>
+
+</RelativeLayout>
